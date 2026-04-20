@@ -227,7 +227,7 @@ sequenceDiagram
 | **CRM** | Odoo 19 Community | Aktuellste Version, KI-optimiert, volle Performance |
 | **Datenbank** | PostgreSQL 15 | Enterprise-grade, von Odoo nativ verwendet |
 | **Datei-Speicher** | Odoo Filestore (verschlüsselt) | Dokumente direkt im CRM verknüpft |
-| **E-Mail** | Brevo / SendGrid + SMTP | Zuverlässige Zustellung, DSGVO-konform |
+| **E-Mail** | Odoo E-Mail (SMTP) | Integriert, Versand via Gateway (z.B. Brevo/IONOS) |
 | **Server** | IONOS VPS (Ubuntu 22.04 LTS) | Rechenzentrum in Deutschland, DSGVO-konform |
 | **Backup** | Tägliches Backup via IONOS Snapshots + pg_dump | Datensicherheit |
 | **Monitoring** | Uptime Kuma oder Netdata | Systemüberwachung, Alarmierung |
