@@ -1029,7 +1029,7 @@ sequenceDiagram
     </tbody>
   </table>
 
-  <h2>Phase 2 – Patientenportal / Frontend (Woche 2–3)</h2>
+  <h2>Phase 2 – Patientenportal / Frontend (zu verhandeln)</h2>
   <p>Das Patientenportal wird als responsives, mehrstufiges Webformular (Wizard) entwickelt:</p>
 
   <table>
@@ -1044,7 +1044,7 @@ sequenceDiagram
 
   <p><strong>UX-Features:</strong> Fortschrittsbalken · Echtzeit-Validierung · Ladeanimation · Datei-Vorschau · Mobil-optimiert</p>
 
-  <h2>Phase 3 – Backend API &amp; Odoo-Integration (Woche 3–4)</h2>
+  <h2>Phase 3 – Backend API &amp; Odoo-Integration (3 Tage)</h2>
 
   <h4>REST API Endpunkte</h4>
   <table>
@@ -1128,7 +1128,7 @@ sequenceDiagram
   </table>
 
   <!-- ─────────── 6. ZEITPLAN ─────────── -->
-  <h1 class="section-title">6. Projektplan &amp; Zeitstrahl (8 Wochen)</h1>
+  <h1 class="section-title">6. Projektplan &amp; Zeitstrahl (ca. 4–6 Wochen)</h1>
 
   <div class="diagram-container" data-diagram-id="gantt">
     <div class="diagram-toolbar">
@@ -1148,40 +1148,34 @@ gantt
     axisFormat  %d. %b
 
     section Phase 0 – Infrastruktur
-    IONOS VPS Setup & Hardening          :p0a, 2026-05-05, 3d
-    Nginx, SSL, PostgreSQL               :p0b, after p0a, 2d
-    Odoo 17 Installation & Grundsetup    :p0c, after p0b, 3d
+    IONOS Setup & Hardening        :p0a, 2026-05-05, 1d
+    Webserver & DB                 :p0b, after p0a, 1d
+    Odoo 17 Installation           :p0c, after p0b, 1d
 
     section Phase 1 – Odoo CRM
-    Benutzerdefiniertes Patientenmodul   :p1a, after p0c, 4d
-    Workflow & Kanban-Phasen             :p1b, after p1a, 2d
-    E-Mail-Vorlagen & Automationen       :p1c, after p1b, 3d
+    Patientenmodul & Felder        :p1a, after p0c, 1d
+    Workflow & Automationen        :p1b, after p1a, 1d
 
-    section Phase 2 – Patientenportal
-    Frontend Formular Wizard             :p2a, after p0c, 5d
-    Dokument-Upload & DSGVO-Seite        :p2b, after p2a, 3d
-    Mobile Optimierung & Feinschliff     :p2c, after p2b, 2d
+    section Phase 2 – Portal
+    Frontend (zu verhandeln)       :p2a, after p0c, 10d
 
-    section Phase 3 – Backend & Integration
-    REST API Entwicklung                 :p3a, after p2a, 4d
-    Odoo XML-RPC Integration             :p3b, after p3a, 3d
-    Datei-Upload-Sicherheit ClamAV       :p3c, after p3b, 2d
+    section Phase 3 – Backend
+    API & Integration              :p3a, after p2a, 3d
+    Sicherheit & Virenscan         :p3b, after p3a, 1d
 
-    section Phase 4 – Tests & DSGVO
-    DSGVO Compliance Review              :p4a, after p3c, 2d
-    End-to-End Tests                     :p4b, after p4a, 3d
-    Last-Tests & Sicherheitsaudit        :p4c, after p4b, 2d
+    section Phase 4 – Testing
+    QS & DSGVO Review              :p4a, after p3b, 1d
+    End-to-End Tests               :p4b, after p4a, 2d
 
     section Phase 5 – Launch
-    Kundenpräsentation & Feedback        :p5a, after p4c, 2d
-    Korrekturen & Feintuning             :p5b, after p5a, 3d
-    Go-Live                              :milestone, after p5b, 0d
+    Abnahme & Go-Live              :p5a, after p4b, 3d
+    Go-Live                        :milestone, after p5a, 0d
       </div>
     </div>
     <div class="diagram-hint">🖱️ Mausrad zum Zoomen · Ziehen zum Verschieben · Vollbild für Details</div>
   </div>
 
-  <p><strong>Gesamtdauer: ca. 8 Wochen</strong> (abhängig von Feedback-Zyklen und Drittanbieter-Zugängen)</p>
+  <p><strong>Gesamtdauer: ca. 4–6 Wochen</strong> (stark abhängig von Phase 2 – "zu verhandeln")</p>
 
   <!-- ─────────── DELIVERABLES ─────────── -->
   <h1 class="section-title">7. Liefergegenstände</h1>

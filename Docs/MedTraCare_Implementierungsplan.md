@@ -236,7 +236,7 @@ sequenceDiagram
 
 ## 5. Detaillierte Implementierungsschritte
 
-### Phase 0 – Infrastruktur & Setup (Woche 1)
+### Phase 0 – Infrastruktur & Setup (2 Tage)
 
 - [ ] IONOS VPS bestellen und Ubuntu 22.04 LTS installieren
 - [ ] Server-Hardening (SSH-Key-Only, Fail2Ban, UFW Firewall)
@@ -248,7 +248,7 @@ sequenceDiagram
 
 ---
 
-### Phase 1 – Odoo CRM Konfiguration (Woche 1–2)
+### Phase 1 – Odoo CRM Konfiguration (2 Tage)
 
 #### 1.1 Benutzerdefiniertes Patientenmodell
 
@@ -293,7 +293,7 @@ Ein erweitertes CRM-Lead-Modell wird in einem benutzerdefinierten Odoo-Modul (`m
 
 ---
 
-### Phase 2 – Patientenportal (Frontend) (Woche 2–3)
+### Phase 2 – Patientenportal (Frontend) (zu verhandeln)
 
 #### 2.1 Formular-Seite (Schritt-für-Schritt, mehrstufig)
 
@@ -312,7 +312,7 @@ Ein erweitertes CRM-Lead-Modell wird in einem benutzerdefinierten Odoo-Modul (`m
 
 ---
 
-### Phase 3 – Backend API & Odoo-Integration (Woche 3–4)
+### Phase 3 – Backend API & Odoo-Integration (3 Tage)
 
 #### 3.1 REST API Endpunkte
 
@@ -387,37 +387,32 @@ gantt
     axisFormat  %d. %b
 
     section Phase 0
-    IONOS VPS Setup          :p0a, 2026-05-05, 3d
-    Nginx SSL PostgreSQL     :p0b, after p0a, 2d
-    Odoo 17 Installation     :p0c, after p0b, 3d
+    IONOS VPS Setup          :p0a, 2026-05-05, 1d
+    Nginx SSL PostgreSQL     :p0b, after p0a, 1d
+    Odoo 17 Installation     :p0c, after p0b, 1d
 
     section Phase 1
-    Patientenmodul           :p1a, after p0c, 4d
-    Workflow Kanban           :p1b, after p1a, 2d
-    E-Mail Automationen      :p1c, after p1b, 3d
+    Patientenmodul           :p1a, after p0c, 1d
+    Workflow & Automationen  :p1b, after p1a, 1d
 
     section Phase 2
-    Frontend Formular        :p2a, after p0c, 5d
-    Upload DSGVO             :p2b, after p2a, 3d
-    Mobile Optimierung       :p2c, after p2b, 2d
+    Frontend (zu verhandeln) :p2a, after p0c, 10d
 
     section Phase 3
-    REST API                 :p3a, after p2a, 4d
-    Odoo Integration         :p3b, after p3a, 3d
-    ClamAV Sicherheit        :p3c, after p3b, 2d
+    REST API & Integration   :p3a, after p2a, 3d
+    ClamAV Sicherheit        :p3b, after p3a, 1d
 
     section Phase 4
-    DSGVO Review             :p4a, after p3c, 2d
-    E2E Tests                :p4b, after p4a, 3d
-    Sicherheitsaudit         :p4c, after p4b, 2d
+    DSGVO Review             :p4a, after p3b, 1d
+    E2E Tests                :p4b, after p4a, 2d
+    Sicherheitsaudit         :p4c, after p4b, 1d
 
     section Phase 5
-    Kundenpräsentation       :p5a, after p4c, 2d
-    Korrekturen              :p5b, after p5a, 3d
-    Go-Live                  :milestone, after p5b, 0d
+    Abnahme & Go-Live        :p5a, after p4c, 3d
+    Go-Live                  :milestone, after p5a, 0d
 ```
 
-**Gesamtdauer: ca. 8 Wochen**
+**Gesamtdauer: ca. 4–6 Wochen** (stark abhängig von Phase 2)
 
 ---
 
