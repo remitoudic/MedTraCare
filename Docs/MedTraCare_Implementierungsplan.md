@@ -236,7 +236,7 @@ sequenceDiagram
 
 ## 5. Detaillierte Implementierungsschritte
 
-### Phase 0 – Infrastruktur & Setup (2 Tage)
+### Phase 0 – Infrastruktur & Setup (1 Tage)
 
 - [ ] IONOS VPS bestellen und Ubuntu 22.04 LTS installieren
 - [ ] Server-Hardening (SSH-Key-Only, Fail2Ban, UFW Firewall)
@@ -351,7 +351,7 @@ Ein erweitertes CRM-Lead-Modell wird in einem benutzerdefinierten Odoo-Modul (`m
 
 ---
 
-### Phase 5 – Treueprogramm-Logik (2 Tage)
+### Phase 5 – Treueprogramm-Logik (2-3 Tage)
 
 #### Option A – Finanzierung mit 0% Zinsen
 - Weiterleitung zu Finanzierungspartner-Antragsstrecke per E-Mail-Link
@@ -413,7 +413,7 @@ gantt
     Go-Live                  :milestone, after p5b, 0d
 ```
 
-**Gesamtdauer: ca. 3 Wochen**
+**Gesamtdauer: ca. 2-3 Wochen**
 
 ---
 
