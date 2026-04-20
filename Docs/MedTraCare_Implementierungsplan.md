@@ -224,7 +224,7 @@ sequenceDiagram
 | **Webserver** | Nginx | Reverse Proxy, SSL-Terminierung, hohe Performance |
 | **SSL-Zertifikat** | Let's Encrypt (Certbot) | Kostenfrei, automatisch erneuert, DSGVO-konform |
 | **Backend API** | Python (FastAPI) | Schnell, modern, ideal für Odoo-Integration |
-| **CRM** | Odoo 17 Community | Open Source, vollständig anpassbar, DSGVO-konform |
+| **CRM** | Odoo 19 Community | Aktuellste Version, KI-optimiert, volle Performance |
 | **Datenbank** | PostgreSQL 15 | Enterprise-grade, von Odoo nativ verwendet |
 | **Datei-Speicher** | Odoo Filestore (verschlüsselt) | Dokumente direkt im CRM verknüpft |
 | **E-Mail** | Brevo / SendGrid + SMTP | Zuverlässige Zustellung, DSGVO-konform |
@@ -243,7 +243,7 @@ sequenceDiagram
 - [ ] Nginx installieren und konfigurieren
 - [ ] SSL-Zertifikat via Let's Encrypt einrichten (automatische Erneuerung)
 - [ ] PostgreSQL 15 installieren, Benutzer und Datenbank für Odoo anlegen
-- [ ] Odoo 17 Community installieren und Grundkonfiguration vornehmen
+- [ ] Odoo 19 Community installieren und Grundkonfiguration vornehmen
 - [ ] Backup-Strategie einrichten (täglich, Off-Site via IONOS Object Storage)
 
 ---

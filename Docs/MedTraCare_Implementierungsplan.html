@@ -953,7 +953,7 @@ sequenceDiagram
       <tr><td><strong>Webserver</strong></td><td>Nginx</td><td>Reverse Proxy, SSL-Terminierung, hohe Performance</td></tr>
       <tr><td><strong>SSL-Zertifikat</strong></td><td>Let's Encrypt (Certbot)</td><td>Kostenfrei, automatisch erneuert, DSGVO-konform</td></tr>
       <tr><td><strong>Backend API</strong></td><td>Python 3.12 + FastAPI</td><td>Modern, schnell, ideal für Odoo XML-RPC Integration</td></tr>
-      <tr><td><strong>CRM</strong></td><td>Odoo 17 Community</td><td>Open Source, vollständig anpassbar, DSGVO-konform</td></tr>
+      <tr><td><strong>CRM</strong></td><td>Odoo 19 Community Edition</td><td>Aktuellste Version (2025/26), KI-optimiert, volle Performance</td></tr>
       <tr><td><strong>Datenbank</strong></td><td>PostgreSQL 15</td><td>Enterprise-grade, nativ von Odoo verwendet</td></tr>
       <tr><td><strong>Datei-Speicher</strong></td><td>Odoo Filestore (verschlüsselt)</td><td>Dokumente direkt im CRM verknüpft und gesichert</td></tr>
       <tr><td><strong>E-Mail</strong></td><td>Brevo / SendGrid + SMTP</td><td>Zuverlässige Zustellung, DSGVO-konform, EU-Server</td></tr>
@@ -973,7 +973,7 @@ sequenceDiagram
     <li>Server-Hardening: SSH-Key-Only, Fail2Ban, UFW-Firewall konfigurieren</li>
     <li>Nginx installieren, virtuellen Host und SSL (Let's Encrypt) einrichten</li>
     <li>PostgreSQL 15 installieren, Odoo-Datenbankbenutzer anlegen</li>
-    <li>Odoo 17 Community installieren und Grundkonfiguration vornehmen</li>
+    <li>Odoo 19 Community installieren und Grundkonfiguration vornehmen (LTS Version 2025/26)</li>
     <li>Backup-Strategie einrichten (täglich, IONOS Object Storage)</li>
   </ul>
 
@@ -1150,7 +1150,7 @@ gantt
     section Phase 0 – Infrastruktur
     IONOS Setup & Hardening        :p0a, 2026-05-05, 1d
     Webserver & DB                 :p0b, after p0a, 1d
-    Odoo 17 Installation           :p0c, after p0b, 1d
+    Odoo 19 Installation           :p0c, after p0b, 1d
 
     section Phase 1 – Odoo CRM
     Patientenmodul & Felder        :p1a, after p0c, 1d
@@ -1317,7 +1317,7 @@ graph LR
     <tbody>
       <tr><td>IONOS VPS (4 vCPU, 8 GB RAM, 100 GB SSD)</td><td>–</td><td>~20–30 €</td></tr>
       <tr><td>SSL-Zertifikat (Let's Encrypt)</td><td>0 €</td><td>0 €</td></tr>
-      <tr><td>Odoo 17 Community (Open Source)</td><td>0 €</td><td>0 €</td></tr>
+      <tr><td>Odoo 19 Community (Open Source)</td><td>0 €</td><td>0 €</td></tr>
       <tr><td>E-Mail-Dienst (Brevo Starter)</td><td>–</td><td>0–15 €</td></tr>
       <tr><td>IONOS Object Storage (Backup)</td><td>–</td><td>~5 €</td></tr>
       <tr><td><strong>Entwicklungskosten</strong></td><td><strong>[auf Anfrage]</strong></td><td>–</td></tr>
