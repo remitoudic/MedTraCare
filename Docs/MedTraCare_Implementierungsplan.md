@@ -463,20 +463,7 @@ gantt
 
 ---
 
-## 11. Kostenübersicht
-
-| Position | Monatlich |
-|---|---|
-| IONOS VPS | ~20–30 € |
-| SSL (Let's Encrypt) | 0 € |
-| Odoo 19 Community | 0 € |
-| E-Mail (Brevo) | 0–15 € |
-| Backup (Object Storage) | ~5 € |
-| **Gesamt laufend** | **ca. 25–50 €/Monat** |
-
----
-
-## 12. Warum ich der richtige Partner bin
+## 11. Warum ich der richtige Partner bin
 
 - **Odoo-Expertise:** Mehrjährige Erfahrung in Customizing und Modulentwicklung
 - **DSGVO-Kenntnisse:** Datenschutzkonforme Webapplikationen für Deutschland
@@ -486,7 +473,7 @@ gantt
 
 ---
 
-## 13. Nächste Schritte
+## 12. Nächste Schritte
 
 1. **Kick-off-Gespräch** – Offene Fragen klären
 2. **Anforderungs-Workshop** – Kliniken, Behandlungsarten, E-Mail-Texte definieren
