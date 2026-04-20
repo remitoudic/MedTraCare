@@ -507,4 +507,4 @@ gantt
 
 ---
 
-*Kontakt:* **[Ihr Name]** | [Ihre E-Mail] | [Ihr Malt-Profil-Link]
+*Kontakt:* **Rémi TOUDIC** | [remitoudic@gmail.com](mailto:remitoudic@gmail.com) | [Malt Profil](https://www.malt.com/profile/remitoudic)
