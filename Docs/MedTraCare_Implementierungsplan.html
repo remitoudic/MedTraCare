@@ -640,6 +640,7 @@
     <h2>📋 Inhaltsverzeichnis</h2>
     <ol>
       <li><strong>Projektzusammenfassung</strong></li>
+      <li><strong>Business Flow (Geschäftsprozess)</strong></li>
       <li><strong>Gesamtarchitektur</strong></li>
       <li><strong>Patient Journey – Prozessablauf</strong> (7 Phasen)</li>
       <li><strong>Technischer Stack</strong></li>
@@ -684,17 +685,63 @@
 
   <p>Die gesamte Infrastruktur wird auf einem <strong>IONOS VPS (Ubuntu 22.04 LTS)</strong> in Deutschland betrieben und entspricht vollständig der <strong>DSGVO</strong>.</p>
 
-  <!-- ─────────── 2. ARCHITEKTUR ─────────── -->
-  <h1 class="section-title">2. Gesamtarchitektur</h1>
+  <!-- ─────────── 2. BUSINESS FLOW ─────────── -->
+  <h1 class="section-title">2. Business Flow (Geschäftsprozess)</h1>
+
+  <p>
+    Dieser hochgradig abstrahierte Ablauf zeigt den Kern des MedTraCare-Modells: 
+    Vom ersten Klinikangebot bis zur Loyalisierung des Patienten durch das Treueprogramm.
+  </p>
+
+  <div class="diagram-container" data-diagram-id="business">
+    <div class="diagram-toolbar">
+      <span class="diagram-toolbar-title">Abb. 1 – Strategischer Geschäftsablauf</span>
+      <div class="diagram-toolbar-actions">
+        <button class="btn-diagram" onclick="zoomIn('business')">＋ Zoom</button>
+        <button class="btn-diagram" onclick="zoomOut('business')">－ Zoom</button>
+        <button class="btn-diagram" onclick="resetZoom('business')">↺ Reset</button>
+        <button class="btn-diagram" onclick="openFullscreen('business', 'Abb. 1 – Strategischer Geschäftsablauf')">⛶ Vollbild</button>
+      </div>
+    </div>
+    <div class="diagram-viewport" id="viewport-business" style="min-height:300px;">
+      <div class="mermaid">
+graph LR
+    subgraph "Phase A: Akquisition"
+        A1["👤 Klinikangebot liegt vor"] --> A2["🌐 Upload im MedTraCare Portal"]
+    end
+    subgraph "Phase B: Onboarding & Prüfung"
+        A2 --> B1["📊 CRM Lead Generierung"]
+        B1 --> B2["👔 Datenvalidierung & Beratung"]
+    end
+    subgraph "Phase C: Wertschöpfung"
+        B2 --> C1["✨ Zusatzservices: FastTrack, Lounge etc."]
+        C1 --> C2["💳 Zahlungsabwicklung Klinik & Patient"]
+    end
+    subgraph "Phase D: Loyalisierung"
+        C2 --> D1["💰 Treueprogramm & Cashback"]
+        D1 --> D2["⭐ Bewertung & Empfehlung"]
+    end
+
+    style A1 fill:#eff6ff,stroke:#3b82f6
+    style B1 fill:#f0fdf4,stroke:#22c55e
+    style C1 fill:#fff7ed,stroke:#f97316
+    style D1 fill:#faf5ff,stroke:#a855f7
+      </div>
+    </div>
+    <div class="diagram-hint">🖱️ Mausrad zum Zoomen · Ziehen zum Verschieben · Vollbild für Details</div>
+  </div>
+
+  <!-- ─────────── 3. ARCHITEKTUR ─────────── -->
+  <h1 class="section-title">3. Gesamtarchitektur</h1>
 
   <div class="diagram-container" data-diagram-id="arch">
     <div class="diagram-toolbar">
-      <span class="diagram-toolbar-title">Abb. 1 – Systemarchitektur</span>
+      <span class="diagram-toolbar-title">Abb. 2 – Systemarchitektur</span>
       <div class="diagram-toolbar-actions">
         <button class="btn-diagram" onclick="zoomIn('arch')">＋ Zoom</button>
         <button class="btn-diagram" onclick="zoomOut('arch')">－ Zoom</button>
         <button class="btn-diagram" onclick="resetZoom('arch')">↺ Reset</button>
-        <button class="btn-diagram" onclick="openFullscreen('arch', 'Abb. 1 – Systemarchitektur')">⛶ Vollbild</button>
+        <button class="btn-diagram" onclick="openFullscreen('arch', 'Abb. 2 – Systemarchitektur')">⛶ Vollbild</button>
       </div>
     </div>
     <div class="diagram-viewport" id="viewport-arch">
@@ -744,8 +791,8 @@ graph TB
     <div class="diagram-hint">🖱️ Mausrad zum Zoomen · Ziehen zum Verschieben · Vollbild für Details</div>
   </div>
 
-  <!-- ─────────── 3. PATIENT JOURNEY ─────────── -->
-  <h1 class="section-title">3. Patient Journey – Prozessablauf (7 Phasen)</h1>
+  <!-- ─────────── 4. PATIENT JOURNEY ─────────── -->
+  <h1 class="section-title">4. Patient Journey – Prozessablauf (7 Phasen)</h1>
 
   <p>
     Die folgende Darstellung zeigt den vollständigen Patientenprozess von der ersten
@@ -754,12 +801,12 @@ graph TB
 
   <div class="diagram-container" data-diagram-id="journey">
     <div class="diagram-toolbar">
-      <span class="diagram-toolbar-title">Abb. 2 – Vollständiger Patientenprozess</span>
+      <span class="diagram-toolbar-title">Abb. 3 – Vollständiger Patientenprozess</span>
       <div class="diagram-toolbar-actions">
         <button class="btn-diagram" onclick="zoomIn('journey')">＋ Zoom</button>
         <button class="btn-diagram" onclick="zoomOut('journey')">－ Zoom</button>
         <button class="btn-diagram" onclick="resetZoom('journey')">↺ Reset</button>
-        <button class="btn-diagram" onclick="openFullscreen('journey', 'Abb. 2 – Vollständiger Patientenprozess')">⛶ Vollbild</button>
+        <button class="btn-diagram" onclick="openFullscreen('journey', 'Abb. 3 – Vollständiger Patientenprozess')">⛶ Vollbild</button>
       </div>
     </div>
     <div class="diagram-viewport" id="viewport-journey" style="min-height:550px;">
@@ -852,12 +899,12 @@ graph TD
 
   <div class="diagram-container" data-diagram-id="sequence">
     <div class="diagram-toolbar">
-      <span class="diagram-toolbar-title">Abb. 3 – Sequenzieller Datenfluss</span>
+      <span class="diagram-toolbar-title">Abb. 4 – Sequenzieller Datenfluss</span>
       <div class="diagram-toolbar-actions">
         <button class="btn-diagram" onclick="zoomIn('sequence')">＋ Zoom</button>
         <button class="btn-diagram" onclick="zoomOut('sequence')">－ Zoom</button>
         <button class="btn-diagram" onclick="resetZoom('sequence')">↺ Reset</button>
-        <button class="btn-diagram" onclick="openFullscreen('sequence', 'Abb. 3 – Sequenzieller Datenfluss')">⛶ Vollbild</button>
+        <button class="btn-diagram" onclick="openFullscreen('sequence', 'Abb. 4 – Sequenzieller Datenfluss')">⛶ Vollbild</button>
       </div>
     </div>
     <div class="diagram-viewport" id="viewport-sequence" style="min-height:800px;">
@@ -942,8 +989,8 @@ sequenceDiagram
     <div class="diagram-hint">🖱️ Mausrad zum Zoomen · Ziehen zum Verschieben · Vollbild für Details</div>
   </div>
 
-  <!-- ─────────── 4. TECH STACK ─────────── -->
-  <h1 class="section-title">4. Technischer Stack</h1>
+  <!-- ─────────── 5. TECH STACK ─────────── -->
+  <h1 class="section-title">5. Technischer Stack</h1>
 
   <table>
     <thead>
@@ -964,8 +1011,8 @@ sequenceDiagram
     </tbody>
   </table>
 
-  <!-- ─────────── 5. IMPLEMENTIERUNG ─────────── -->
-  <h1 class="section-title">5. Detaillierte Implementierungsschritte</h1>
+  <!-- ─────────── 6. IMPLEMENTIERUNG ─────────── -->
+  <h1 class="section-title">6. Detaillierte Implementierungsschritte</h1>
 
   <h2>Phase 0 – Infrastruktur &amp; Setup (Woche 1)</h2>
   <ul class="checklist">
@@ -1132,12 +1179,12 @@ sequenceDiagram
 
   <div class="diagram-container" data-diagram-id="gantt">
     <div class="diagram-toolbar">
-      <span class="diagram-toolbar-title">Abb. 3 – Projekt-Timeline</span>
+      <span class="diagram-toolbar-title">Abb. 5 – Projekt-Timeline</span>
       <div class="diagram-toolbar-actions">
         <button class="btn-diagram" onclick="zoomIn('gantt')">＋ Zoom</button>
         <button class="btn-diagram" onclick="zoomOut('gantt')">－ Zoom</button>
         <button class="btn-diagram" onclick="resetZoom('gantt')">↺ Reset</button>
-        <button class="btn-diagram" onclick="openFullscreen('gantt', 'Abb. 3 – Projekt-Timeline')">⛶ Vollbild</button>
+        <button class="btn-diagram" onclick="openFullscreen('gantt', 'Abb. 5 – Projekt-Timeline')">⛶ Vollbild</button>
       </div>
     </div>
     <div class="diagram-viewport" id="viewport-gantt">
@@ -1184,7 +1231,7 @@ gantt
   <p><strong>Gesamtdauer: ca. 8 Wochen</strong> (abhängig von Feedback-Zyklen und Drittanbieter-Zugängen)</p>
 
   <!-- ─────────── DELIVERABLES ─────────── -->
-  <h1 class="section-title">7. Liefergegenstände</h1>
+  <h1 class="section-title">8. Liefergegenstände</h1>
 
   <div class="deliverable-grid">
     <div class="deliverable-item">
@@ -1235,16 +1282,16 @@ gantt
   </div>
 
   <!-- ─────────── BACKUP ─────────── -->
-  <h1 class="section-title">8. Datensicherheit &amp; Backup</h1>
+  <h1 class="section-title">9. Datensicherheit &amp; Backup</h1>
 
   <div class="diagram-container" data-diagram-id="backup">
     <div class="diagram-toolbar">
-      <span class="diagram-toolbar-title">Abb. 4 – Backup-Strategie</span>
+      <span class="diagram-toolbar-title">Abb. 6 – Backup-Strategie</span>
       <div class="diagram-toolbar-actions">
         <button class="btn-diagram" onclick="zoomIn('backup')">＋ Zoom</button>
         <button class="btn-diagram" onclick="zoomOut('backup')">－ Zoom</button>
         <button class="btn-diagram" onclick="resetZoom('backup')">↺ Reset</button>
-        <button class="btn-diagram" onclick="openFullscreen('backup', 'Abb. 4 – Backup-Strategie')">⛶ Vollbild</button>
+        <button class="btn-diagram" onclick="openFullscreen('backup', 'Abb. 6 – Backup-Strategie')">⛶ Vollbild</button>
       </div>
     </div>
     <div class="diagram-viewport" id="viewport-backup" style="min-height:300px;">
@@ -1272,7 +1319,7 @@ graph LR
   </table>
 
   <!-- ─────────── ROLLEN ─────────── -->
-  <h1 class="section-title">9. Rollen &amp; Zugriffsrechte in Odoo</h1>
+  <h1 class="section-title">10. Rollen &amp; Zugriffsrechte in Odoo</h1>
 
   <table>
     <thead><tr><th>Rolle</th><th>Zugriffsrechte</th></tr></thead>
@@ -1285,7 +1332,7 @@ graph LR
   </table>
 
   <!-- ─────────── VORAUSSETZUNGEN ─────────── -->
-  <h1 class="section-title">10. Mitwirkungspflichten des Auftraggebers</h1>
+  <h1 class="section-title">11. Mitwirkungspflichten des Auftraggebers</h1>
 
   <p>Für eine reibungslose Umsetzung werden folgende Informationen und Zugänge frühzeitig benötigt:</p>
 
@@ -1302,7 +1349,7 @@ graph LR
   </ul>
 
   <!-- ─────────── RISIKEN ─────────── -->
-  <h1 class="section-title">11. Risiken &amp; Gegenmaßnahmen</h1>
+  <h1 class="section-title">12. Risiken &amp; Gegenmaßnahmen</h1>
 
   <table>
     <thead><tr><th>Risiko</th><th>Wahrscheinlichkeit</th><th>Gegenmaßnahme</th></tr></thead>
@@ -1316,7 +1363,7 @@ graph LR
   </table>
 
   <!-- ─────────── KOSTEN ─────────── -->
-  <h1 class="section-title">12. Kostenübersicht (Schätzung laufende Kosten)</h1>
+  <h1 class="section-title">13. Kostenübersicht (Schätzung laufende Kosten)</h1>
 
   <table>
     <thead><tr><th>Position</th><th>Einmalig</th><th>Monatlich</th></tr></thead>
@@ -1332,7 +1379,7 @@ graph LR
   </table>
 
   <!-- ─────────── ÜBER MICH ─────────── -->
-  <h1 class="section-title">13. Warum ich der richtige Partner bin</h1>
+  <h1 class="section-title">14. Warum ich der richtige Partner bin</h1>
 
   <table>
     <thead><tr><th>Kompetenz</th><th>Details</th></tr></thead>
@@ -1347,7 +1394,7 @@ graph LR
   </table>
 
   <!-- ─────────── NÄCHSTE SCHRITTE ─────────── -->
-  <h1 class="section-title">14. Nächste Schritte</h1>
+  <h1 class="section-title">15. Nächste Schritte</h1>
 
   <ol class="steps-list">
     <li><div><strong>Kick-off-Gespräch</strong> – Offene Fragen klären, Anforderungen finalisieren (ca. 1 Stunde)</div></li>

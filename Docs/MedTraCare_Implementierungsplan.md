@@ -22,7 +22,37 @@ Die gesamte Infrastruktur wird auf einem **IONOS VPS (Ubuntu)** betrieben und en
 
 ---
 
-## 2. Gesamtarchitektur
+## 2. Business Flow (Geschäftsprozess)
+
+Dieser hochgradig abstrahierte Ablauf zeigt den Kern des MedTraCare-Modells: Vom ersten Klinikangebot bis zur Loyalisierung des Patienten durch das Treueprogramm.
+
+```mermaid
+graph LR
+    subgraph "Phase A: Akquisition"
+        A1["👤 Klinikangebot liegt vor"] --> A2["🌐 Upload im MedTraCare Portal"]
+    end
+    subgraph "Phase B: Onboarding & Prüfung"
+        A2 --> B1["📊 CRM Lead Generierung"]
+        B1 --> B2["👔 Datenvalidierung & Beratung"]
+    end
+    subgraph "Phase C: Wertschöpfung"
+        B2 --> C1["✨ Zusatzservices: FastTrack, Lounge etc."]
+        C1 --> C2["💳 Zahlungsabwicklung Klinik & Patient"]
+    end
+    subgraph "Phase D: Loyalisierung"
+        C2 --> D1["💰 Treueprogramm & Cashback"]
+        D1 --> D2["⭐ Bewertung & Empfehlung"]
+    end
+
+    style A1 fill:#eff6ff,stroke:#3b82f6
+    style B1 fill:#f0fdf4,stroke:#22c55e
+    style C1 fill:#fff7ed,stroke:#f97316
+    style D1 fill:#faf5ff,stroke:#a855f7
+```
+
+---
+
+## 3. Gesamtarchitektur
 
 ```mermaid
 graph TB
@@ -61,7 +91,7 @@ graph TB
 
 ---
 
-## 3. Patient Journey – Prozessablauf (7 Phasen)
+## 4. Patient Journey – Prozessablauf (7 Phasen)
 
 ```mermaid
 graph TD
@@ -133,7 +163,7 @@ graph TD
 
 ---
 
-## 3.2 Detaillierter Sequenzieller Datenfluss
+## 4.2 Detaillierter Sequenzieller Datenfluss
 
 Dieses Diagramm zeigt die technischen Interaktionen und Systemaufrufe zwischen den Akteuren in den verschiedenen Phasen des Prozesses.
 
@@ -217,7 +247,7 @@ sequenceDiagram
 
 ---
 
-## 4. Technischer Stack
+## 5. Technischer Stack
 
 | Komponente | Technologie | Begründung |
 |---|---|---|
@@ -234,7 +264,7 @@ sequenceDiagram
 
 ---
 
-## 5. Detaillierte Implementierungsschritte
+## 6. Detaillierte Implementierungsschritte
 
 ### Phase 0 – Infrastruktur & Setup (Woche 1)
 
@@ -378,7 +408,7 @@ Ein erweitertes CRM-Lead-Modell wird in einem benutzerdefinierten Odoo-Modul (`m
 
 ---
 
-## 6. Projektplan & Zeitstrahl
+## 7. Projektplan & Zeitstrahl
 
 ```mermaid
 gantt
@@ -421,7 +451,7 @@ gantt
 
 ---
 
-## 7. Liefergegenstände
+## 8. Liefergegenstände
 
 | # | Liefergegenstand | Beschreibung |
 |---|---|---|
@@ -437,7 +467,7 @@ gantt
 
 ---
 
-## 8. Datensicherheit & Backup
+## 9. Datensicherheit & Backup
 
 - **RTO:** < 2 Stunden
 - **RPO:** < 24 Stunden
@@ -445,7 +475,7 @@ gantt
 
 ---
 
-## 9. Rollen & Zugriffsrechte
+## 10. Rollen & Zugriffsrechte
 
 | Rolle | Zugriffsrechte |
 |---|---|
@@ -456,7 +486,7 @@ gantt
 
 ---
 
-## 10. Mitwirkungspflichten des Auftraggebers
+## 11. Mitwirkungspflichten des Auftraggebers
 
 - [ ] Zugangsdaten zum IONOS VPS
 - [ ] Liste aller Partnerkliniken
@@ -468,7 +498,7 @@ gantt
 
 ---
 
-## 11. Risiken & Gegenmaßnahmen
+## 12. Risiken & Gegenmaßnahmen
 
 | Risiko | Wahrscheinlichkeit | Maßnahme |
 |---|---|---|
@@ -479,7 +509,7 @@ gantt
 
 ---
 
-## 12. Kostenübersicht
+## 13. Kostenübersicht
 
 | Position | Monatlich |
 |---|---|
@@ -492,7 +522,7 @@ gantt
 
 ---
 
-## 13. Warum ich der richtige Partner bin
+## 14. Warum ich der richtige Partner bin
 
 - **Odoo-Expertise:** Mehrjährige Erfahrung in Customizing und Modulentwicklung
 - **DSGVO-Kenntnisse:** Datenschutzkonforme Webapplikationen für Deutschland
@@ -502,7 +532,7 @@ gantt
 
 ---
 
-## 14. Nächste Schritte
+## 15. Nächste Schritte
 
 1. **Kick-off-Gespräch** – Offene Fragen klären
 2. **Anforderungs-Workshop** – Kliniken, Behandlungsarten, E-Mail-Texte definieren
