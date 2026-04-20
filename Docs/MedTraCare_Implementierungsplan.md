@@ -27,7 +27,7 @@ Die gesamte Infrastruktur wird auf einem **IONOS VPS (Ubuntu)** betrieben und en
 Dieser hochgradig abstrahierte Ablauf zeigt den Kern des MedTraCare-Modells: Vom ersten Klinikangebot bis zur Loyalisierung des Patienten durch das Treueprogramm.
 
 ```mermaid
-graph LR
+graph TB
     subgraph "Phase A: Akquisition"
         A1["👤 Klinikangebot liegt vor"] --> A2["🌐 Upload im MedTraCare Portal"]
     end
@@ -44,10 +44,10 @@ graph LR
         D1 --> D2["⭐ Bewertung & Empfehlung"]
     end
 
-    style A1 fill:#eff6ff,stroke:#3b82f6
-    style B1 fill:#f0fdf4,stroke:#22c55e
-    style C1 fill:#fff7ed,stroke:#f97316
-    style D1 fill:#faf5ff,stroke:#a855f7
+    style A1 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
+    style B1 fill:#f0fdf4,stroke:#22c55e,stroke-width:2px
+    style C1 fill:#fff7ed,stroke:#f97316,stroke-width:2px
+    style D1 fill:#faf5ff,stroke:#a855f7,stroke-width:2px
 ```
 
 ---

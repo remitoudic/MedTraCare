@@ -703,9 +703,9 @@
         <button class="btn-diagram" onclick="openFullscreen('business', 'Abb. 1 – Strategischer Geschäftsablauf')">⛶ Vollbild</button>
       </div>
     </div>
-    <div class="diagram-viewport" id="viewport-business" style="min-height:300px;">
+    <div class="diagram-viewport" id="viewport-business" style="min-height:500px;">
       <div class="mermaid">
-graph LR
+graph TB
     subgraph "Phase A: Akquisition"
         A1["👤 Klinikangebot liegt vor"] --> A2["🌐 Upload im MedTraCare Portal"]
     end
@@ -722,10 +722,10 @@ graph LR
         D1 --> D2["⭐ Bewertung & Empfehlung"]
     end
 
-    style A1 fill:#eff6ff,stroke:#3b82f6
-    style B1 fill:#f0fdf4,stroke:#22c55e
-    style C1 fill:#fff7ed,stroke:#f97316
-    style D1 fill:#faf5ff,stroke:#a855f7
+    style A1 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
+    style B1 fill:#f0fdf4,stroke:#22c55e,stroke-width:2px
+    style C1 fill:#fff7ed,stroke:#f97316,stroke-width:2px
+    style D1 fill:#faf5ff,stroke:#a855f7,stroke-width:2px
       </div>
     </div>
     <div class="diagram-hint">🖱️ Mausrad zum Zoomen · Ziehen zum Verschieben · Vollbild für Details</div>
