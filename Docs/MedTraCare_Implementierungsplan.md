@@ -133,6 +133,90 @@ graph TD
 
 ---
 
+## 3.2 Detaillierter Sequenzieller Datenfluss
+
+Dieses Diagramm zeigt die technischen Interaktionen und Systemaufrufe zwischen den Akteuren in den verschiedenen Phasen des Prozesses.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor P as Patient
+    participant PT as Patientenportal
+    participant API as Backend API
+    participant CRM as Odoo CRM
+    participant Mail as E-Mail-Dienst
+    participant Staff as Mitarbeiter
+    participant Klinik as Partnerklinik
+
+    Note over P, Klinik: PHASE 1 - Datenerfassung
+
+    P->>PT: Öffnet Website & füllt Formular aus
+    P->>PT: Lädt Klinikangebot hoch
+    P->>PT: Lädt Behandlungsvertrag hoch
+    P->>PT: Bestätigt DSGVO-Einwilligung (aktiv, Checkbox)
+    PT->>API: POST /api/patient/submit (Formulardaten + Dateien)
+    API->>API: Eingabevalidierung & Virenscan der Dateien
+    API->>CRM: Erstellt Lead / Patientenvorgang via Odoo API
+    API->>API: Speichert Dokumente im verschlüsselten Filestore
+    CRM-->>P: Bestätigungsseite: "Ihre Daten wurden empfangen"
+
+    Note over P, Klinik: PHASE 2 - Vollständigkeitsprüfung
+
+    CRM->>Staff: Benachrichtigung: Neuer Patientenvorgang
+    Staff->>CRM: Prüft Datenvollständigkeit im CRM
+    
+    alt Daten vollständig
+        Staff->>CRM: Markiert Vorgang als "Vollständig"
+        CRM->>Mail: Trigger: Automatische E-Mail an Patient
+        Mail-->>P: "Wir buchen Ihre Zusatzleistungen" + Optionsauswahl
+    else Daten unvollständig
+        Staff->>CRM: Markiert fehlende Felder
+        CRM->>Mail: Nachfrage-E-Mail an Patient
+        Mail-->>P: Nachfrage-E-Mail
+    end
+
+    Note over P, Klinik: PHASE 3 - Treueprogramm-Auswahl
+
+    P->>PT: Wählt Option A, B oder C
+    PT->>CRM: Speichert Treueprogramm-Auswahl im CRM
+
+    Note over P, Klinik: PHASE 4 - Zusatzleistungen buchen
+
+    Staff->>CRM: Markiert gewählte Option (A/B/C)
+    Staff->>Klinik: Bucht Versicherung, FastTrack, Lounge etc.
+    Staff->>CRM: Speichert Partner-Bestätigungen als Anhang
+
+    Note over P, Klinik: PHASE 5 - Zahlungslink
+
+    Klinik->>Staff: Sendet externen Zahlungslink
+    Staff->>CRM: Trägt Zahlungslink ein
+    CRM->>Mail: Automatische E-Mail mit Zahlungslink
+    Mail-->>P: E-Mail mit klinikeigenem Zahlungslink
+
+    Note over P, Klinik: PHASE 6 - Buchungsbestätigung
+
+    Klinik->>Staff: Bestätigt Zahlungseingang
+    Staff->>CRM: Setzt Status auf "Zahlung eingegangen"
+    CRM->>Mail: Trigger: Finale Buchungsbestätigung
+    Mail-->>P: Buchungsbestätigung + alle Anhänge
+
+    Note over P, Klinik: PHASE 7 - Nach der Behandlung
+
+    Klinik->>Staff: Überweist Provision an MedTraCare
+    Staff->>CRM: Prüft Unterlagen, markiert "Abgeschlossen"
+    
+    alt Option B gewählt
+        Staff->>Mail: Auszahlung 5% Treuepräme per Banküberweisung
+    else Option C gewählt
+        Staff->>Mail: Ausgabe Kreditkarte mit 10% Startguthaben
+    end
+    
+    Staff->>Mail: Abschlussmail + Bewertungslink (Google / Trustpilot)
+    Mail-->>P: Abschlussmail
+```
+
+---
+
 ## 4. Technischer Stack
 
 | Komponente | Technologie | Begründung |
