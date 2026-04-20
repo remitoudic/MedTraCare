@@ -293,7 +293,7 @@ Ein erweitertes CRM-Lead-Modell wird in einem benutzerdefinierten Odoo-Modul (`m
 
 ---
 
-### Phase 2 – Patientenportal (Frontend) (zu verhandeln)
+### Phase 2 – Patientenportal (Frontend) (3 Tage - zu verhandeln)
 
 #### 2.1 Formular-Seite (Schritt-für-Schritt, mehrstufig)
 
@@ -312,7 +312,7 @@ Ein erweitertes CRM-Lead-Modell wird in einem benutzerdefinierten Odoo-Modul (`m
 
 ---
 
-### Phase 3 – Backend API & Odoo-Integration (3 Tage)
+### Phase 3 – Backend API & Odoo-Integration (2 Tage)
 
 #### 3.1 REST API Endpunkte
 
@@ -351,7 +351,7 @@ Ein erweitertes CRM-Lead-Modell wird in einem benutzerdefinierten Odoo-Modul (`m
 
 ---
 
-### Phase 5 – Treueprogramm-Logik (Woche 4)
+### Phase 5 – Treueprogramm-Logik (2 Tage)
 
 #### Option A – Finanzierung mit 0% Zinsen
 - Weiterleitung zu Finanzierungspartner-Antragsstrecke per E-Mail-Link
@@ -389,30 +389,31 @@ gantt
     section Phase 0
     IONOS VPS Setup          :p0a, 2026-05-05, 1d
     Nginx SSL PostgreSQL     :p0b, after p0a, 1d
-    Odoo 17 Installation     :p0c, after p0b, 1d
+    Odoo 19 Installation     :p0c, after p0b, 1d
 
     section Phase 1
     Patientenmodul           :p1a, after p0c, 1d
     Workflow & Automationen  :p1b, after p1a, 1d
 
     section Phase 2
-    Frontend (zu verhandeln) :p2a, after p0c, 10d
+    Frontend (3d TBD)        :p2a, after p0c, 3d
 
     section Phase 3
-    REST API & Integration   :p3a, after p2a, 3d
+    REST API & Integration   :p3a, after p2a, 2d
     ClamAV Sicherheit        :p3b, after p3a, 1d
 
     section Phase 4
     DSGVO Review             :p4a, after p3b, 1d
-    E2E Tests                :p4b, after p4a, 2d
+    E2E Tests                :p4b, after p4a, 1d
     Sicherheitsaudit         :p4c, after p4b, 1d
 
     section Phase 5
-    Abnahme & Go-Live        :p5a, after p4c, 3d
-    Go-Live                  :milestone, after p5a, 0d
+    Treueprogramm-Logik      :p5a, after p4c, 2d
+    Abnahme & Go-Live        :p5b, after p5a, 1d
+    Go-Live                  :milestone, after p5b, 0d
 ```
 
-**Gesamtdauer: ca. 4–6 Wochen** (stark abhängig von Phase 2)
+**Gesamtdauer: ca. 3 Wochen**
 
 ---
 
