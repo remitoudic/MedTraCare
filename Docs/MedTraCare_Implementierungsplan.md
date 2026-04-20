@@ -1,7 +1,7 @@
 # Implementierungsplan: MedTraCare – Digitales Patientenportal & CRM-Integration
 
-**Erstellt von:** [Ihr Name]  
-**Datum:** 20. April 2026  
+**Erstellt von:** Rémi TOUDIC  
+**Datum:** 21. April 2026  
 **Version:** 1.0  
 **Projekttyp:** Webbasiertes Patientenportal mit Odoo CRM, DSGVO-konform  
 
