@@ -967,7 +967,7 @@ sequenceDiagram
   <!-- ─────────── 5. IMPLEMENTIERUNG ─────────── -->
   <h1 class="section-title">5. Detaillierte Implementierungsschritte</h1>
 
-  <h2>Phase 0 – Infrastruktur &amp; Setup (Woche 1)</h2>
+  <h2>Phase 0 – Infrastruktur &amp; Setup (2 Tage)</h2>
   <ul class="checklist">
     <li>IONOS VPS bestellen und Ubuntu 22.04 LTS installieren</li>
     <li>Server-Hardening: SSH-Key-Only, Fail2Ban, UFW-Firewall konfigurieren</li>
@@ -977,17 +977,17 @@ sequenceDiagram
     <li>Backup-Strategie einrichten (täglich, IONOS Object Storage)</li>
   </ul>
 
-  <h2>Phase 1 – Odoo CRM Konfiguration (Woche 1–2)</h2>
+  <h2>Phase 1 – Odoo CRM Konfiguration (2 Tage)</h2>
 
   <h4>1.1 Benutzerdefiniertes Patientenmodell (<code>medtracare_patient</code>)</h4>
   <table>
     <thead><tr><th>Feld</th><th>Typ</th><th>Beschreibung</th></tr></thead>
     <tbody>
-      <tr><td><code>partner_first_name</code></td><td>Char</td><td>Vorname (Pflicht)</td></tr>
-      <tr><td><code>partner_last_name</code></td><td>Char</td><td>Nachname (Pflicht)</td></tr>
-      <tr><td><code>partner_address</code></td><td>Text</td><td>Anschrift (Pflicht)</td></tr>
-      <tr><td><code>partner_email</code></td><td>Char</td><td>E-Mail (Pflicht, validiert)</td></tr>
-      <tr><td><code>partner_phone</code></td><td>Char</td><td>Telefon (Pflicht)</td></tr>
+      <tr><td><code>patient_first_name</code></td><td>Char</td><td>Vorname (Pflicht)</td></tr>
+      <tr><td><code>patient_last_name</code></td><td>Char</td><td>Nachname (Pflicht)</td></tr>
+      <tr><td><code>patient_address</code></td><td>Text</td><td>Anschrift (Pflicht)</td></tr>
+      <tr><td><code>patient_email</code></td><td>Char</td><td>E-Mail (Pflicht, validiert)</td></tr>
+      <tr><td><code>patient_phone</code></td><td>Char</td><td>Telefon (Pflicht)</td></tr>
       <tr><td><code>clinic_id</code></td><td>Many2one → res.partner</td><td>Behandelnde Klinik (nur Partnerkliniken)</td></tr>
       <tr><td><code>treatment_ids</code></td><td>Many2many → med.treatment</td><td>Behandlungsarten (max. 3)</td></tr>
       <tr><td><code>surgery_date</code></td><td>Date</td><td>OP-Datum (Pflicht)</td></tr>

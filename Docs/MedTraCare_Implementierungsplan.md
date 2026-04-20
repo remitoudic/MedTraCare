@@ -256,11 +256,11 @@ Ein erweitertes CRM-Lead-Modell wird in einem benutzerdefinierten Odoo-Modul (`m
 
 | Feld | Typ | Beschreibung |
 |---|---|---|
-| `partner_first_name` | Char | Vorname (Pflicht) |
-| `partner_last_name` | Char | Nachname (Pflicht) |
-| `partner_address` | Text | Anschrift (Pflicht) |
-| `partner_email` | Char | E-Mail (Pflicht, validiert) |
-| `partner_phone` | Char | Telefon (Pflicht) |
+| `patient_first_name` | Char | Vorname (Pflicht) |
+| `patient_last_name` | Char | Nachname (Pflicht) |
+| `patient_address` | Text | Anschrift (Pflicht) |
+| `patient_email` | Char | E-Mail (Pflicht, validiert) |
+| `patient_phone` | Char | Telefon (Pflicht) |
 | `clinic_id` | Many2one → res.partner | Behandelnde Klinik (Dropdown, nur Partnerkliniken) |
 | `treatment_ids` | Many2many → med.treatment | Behandlungsarten (max. 3 auswählbar) |
 | `surgery_date` | Date | OP-Datum (Pflicht) |
