@@ -452,19 +452,7 @@ gantt
 
 ---
 
-## 10. Mitwirkungspflichten des Auftraggebers
-
-- [ ] Zugangsdaten zum IONOS VPS
-- [ ] Liste aller Partnerkliniken
-- [ ] Liste aller Behandlungsarten
-- [ ] Logo, Farben und Design-Vorgaben
-- [ ] Datenschutzerklärung und AGB (vom Rechtsanwalt)
-- [ ] Kontakt zu Finanzierungspartner / Kreditkarten-Anbieter
-- [ ] E-Mail-Texte für Automationen
-
----
-
-## 11. Risiken & Gegenmaßnahmen
+## 10. Risiken & Gegenmaßnahmen
 
 | Risiko | Wahrscheinlichkeit | Maßnahme |
 |---|---|---|
@@ -475,20 +463,20 @@ gantt
 
 ---
 
-## 12. Kostenübersicht
+## 11. Kostenübersicht
 
 | Position | Monatlich |
 |---|---|
 | IONOS VPS | ~20–30 € |
 | SSL (Let's Encrypt) | 0 € |
-| Odoo 17 Community | 0 € |
+| Odoo 19 Community | 0 € |
 | E-Mail (Brevo) | 0–15 € |
 | Backup (Object Storage) | ~5 € |
 | **Gesamt laufend** | **ca. 25–50 €/Monat** |
 
 ---
 
-## 13. Warum ich der richtige Partner bin
+## 12. Warum ich der richtige Partner bin
 
 - **Odoo-Expertise:** Mehrjährige Erfahrung in Customizing und Modulentwicklung
 - **DSGVO-Kenntnisse:** Datenschutzkonforme Webapplikationen für Deutschland
@@ -498,7 +486,7 @@ gantt
 
 ---
 
-## 14. Nächste Schritte
+## 13. Nächste Schritte
 
 1. **Kick-off-Gespräch** – Offene Fragen klären
 2. **Anforderungs-Workshop** – Kliniken, Behandlungsarten, E-Mail-Texte definieren
