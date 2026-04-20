@@ -463,24 +463,4 @@ gantt
 
 ---
 
-## 11. Warum ich der richtige Partner bin
-
-- **Odoo-Expertise:** Mehrjährige Erfahrung in Customizing und Modulentwicklung
-- **DSGVO-Kenntnisse:** Datenschutzkonforme Webapplikationen für Deutschland
-- **Full-Stack:** Von Backend-API bis responsivem Frontend
-- **Linux-Administration:** IONOS/Ubuntu, Nginx, SSL, Backup
-- **Kommunikation:** Regelmäßige Updates, transparente Arbeitsweise
-
----
-
-## 12. Nächste Schritte
-
-1. **Kick-off-Gespräch** – Offene Fragen klären
-2. **Anforderungs-Workshop** – Kliniken, Behandlungsarten, E-Mail-Texte definieren
-3. **Vertragsabschluss** – Klarer Leistungsumfang
-4. **Server-Bestellung** – IONOS VPS
-5. **Projektstart** – Phase 0 beginnt
-
----
-
 *Kontakt:* **Rémi TOUDIC** | [remitoudic@gmail.com](mailto:remitoudic@gmail.com) | [Malt Profil](https://www.malt.com/profile/remitoudic)
